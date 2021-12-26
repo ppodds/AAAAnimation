@@ -15,6 +15,9 @@ This is a term project of Assembly Language and System Programming course in NCU
   - Build Tools v142
 - FFmpeg
   - [ffmpeg-n4.4.1-2-gcc33e73618-win64-lgpl-shared-4.4](https://github.com/BtbN/FFmpeg-Builds/releases)
+- Qt
+  - msvc 6.2.2
+  - Windows
 
 ### Clone The Repository and Set Environment Variables
 
@@ -26,5 +29,7 @@ Environment Variables
 
 - ffmpeg
   - `%your_project_path%\includes\ffmpeg`
+- qt
+  - `%your_qt_path%`
 - PATH
-  - `%your_ffmpeg_path%\bin%;...`
+  - `%qt%\bin;%ffmpeg%\bin%;...`
