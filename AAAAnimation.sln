@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AAAAnimation", "AAAAnimation\AAAAnimation.vcxproj", "{10425D7B-534B-4D58-A4BD-0182B362A2D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10425D7B-534B-4D58-A4BD-0182B362A2D4}.Debug|x64.ActiveCfg = Debug|x64
+		{10425D7B-534B-4D58-A4BD-0182B362A2D4}.Debug|x64.Build.0 = Debug|x64
+		{10425D7B-534B-4D58-A4BD-0182B362A2D4}.Release|x64.ActiveCfg = Release|x64
+		{10425D7B-534B-4D58-A4BD-0182B362A2D4}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0402E6C7-AFB8-4AA8-85E7-047FDC15DA1D}
+	EndGlobalSection
+EndGlobal
