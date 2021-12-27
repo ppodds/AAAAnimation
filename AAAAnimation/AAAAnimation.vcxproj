@@ -107,9 +107,6 @@
   <ItemGroup>
     <ClCompile Include="player\ascii_player_thread.cpp" />
     <QtRcc Include="aaaanimation.qrc" />
-    <QtUic Include="aaaanimation.ui" />
-    <QtMoc Include="aaaanimation.h" />
-    <ClCompile Include="aaaanimation.cpp" />
     <ClCompile Include="console\console_controller.cpp" />
     <ClCompile Include="ffmpeg\stream_wrapper.cpp" />
     <ClCompile Include="ffmpeg\video_decoder.cpp" />
@@ -125,7 +122,7 @@
     <ClInclude Include="ffmpeg\stream_wrapper.h" />
     <ClInclude Include="ffmpeg\video_decoder.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="player\ascii_player_thread.h" />
+    <QtMoc Include="player\ascii_player_thread.h" />
     <ClInclude Include="transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

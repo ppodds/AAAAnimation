@@ -8,13 +8,15 @@ AsciiPlayerThread::AsciiPlayerThread()
 {
 }
 
+AsciiPlayerThread::AsciiPlayerThread(std::string file_path)
+{
+	this->file_path = file_path;
+}
+
 void AsciiPlayerThread::run()
 {
-	char buf[1024 * 256];
+	char* buf = new char[1024 * 256];
 	setbuf(stdout, buf);
-	std::cout << "Enter an video file path:" << std::endl;
-	std::string file_path;
-	std::cin >> file_path;
 	VideoDecoder video_decoder = VideoDecoder(file_path);
 	ConsoleController console_controller;
 	console_controller.set_console_font();
@@ -37,4 +39,5 @@ void AsciiPlayerThread::run()
 		frame = video_decoder.next_frame();
 	}
 	delete[] arr;
+	delete[] buf;
 }

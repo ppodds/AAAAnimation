@@ -26,15 +26,6 @@
     <QtRcc Include="aaaanimation.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="aaaanimation.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtMoc Include="aaaanimation.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="aaaanimation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,9 +57,6 @@
     <ClInclude Include="console\console_controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="player\ascii_player_thread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="transform.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -77,5 +65,10 @@
     <MASM Include="transform.asm">
       <Filter>Source Files</Filter>
     </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="player\ascii_player_thread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
