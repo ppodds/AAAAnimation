@@ -33,7 +33,7 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>msvc 6.2.2</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;multimedia;widgets;multimediawidgets;</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
@@ -105,6 +105,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="player\ascii_player_thread.cpp" />
     <QtRcc Include="aaaanimation.qrc" />
     <QtUic Include="aaaanimation.ui" />
     <QtMoc Include="aaaanimation.h" />
@@ -124,6 +125,8 @@
     <ClInclude Include="ffmpeg\stream_wrapper.h" />
     <ClInclude Include="ffmpeg\video_decoder.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="player\ascii_player_thread.h" />
+    <ClInclude Include="transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

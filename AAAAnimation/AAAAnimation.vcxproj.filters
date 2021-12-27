@@ -49,6 +49,9 @@
     <ClCompile Include="console\console_controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="player\ascii_player_thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ffmpeg\stream_wrapper.h">
@@ -62,6 +65,12 @@
     </ClInclude>
     <ClInclude Include="console\console_controller.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="player\ascii_player_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transform.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
