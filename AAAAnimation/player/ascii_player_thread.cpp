@@ -4,11 +4,6 @@
 #include "../console/console_controller.h"
 #include "../transform.h"
 #include <QThread>
-#include<QDateTime>
-#include <QString>
-#include <QTime>
-#include <QDebug>
-#include <QDate>
 
 AsciiPlayerThread::AsciiPlayerThread()
 {
