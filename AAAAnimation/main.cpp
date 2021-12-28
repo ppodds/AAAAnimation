@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 	player.setVideoOutput(&video_widget);
 	player.setAudioOutput(&audio_output);
 	ascii_player_thread.start();
+	QObject::connect(&player, &QMediaPlayer::positionChanged, &ascii_player_thread, &AsciiPlayerThread::setPosition);
 	player.play();
 	return a.exec();
 }

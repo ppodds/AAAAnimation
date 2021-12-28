@@ -41,3 +41,8 @@ void AsciiPlayerThread::run()
 	delete[] arr;
 	delete[] buf;
 }
+
+void AsciiPlayerThread::setPosition(qint64 position)
+{
+	this->position = position;
+}
