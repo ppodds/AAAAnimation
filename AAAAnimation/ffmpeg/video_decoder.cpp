@@ -57,3 +57,8 @@ int VideoDecoder::get_video_height()
 {
 	return video.get_codec_context()->height;
 }
+
+AVRational VideoDecoder::get_video_timebase()
+{
+	return video.get_stream()->time_base;
+}

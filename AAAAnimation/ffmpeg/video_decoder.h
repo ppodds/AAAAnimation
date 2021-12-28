@@ -13,6 +13,7 @@ public:
 	AVFrame* next_frame();
 	int get_video_width();
 	int get_video_height();
+	AVRational get_video_timebase();
 private:
 	AVFormatContext* format_context;
 	StreamWrapper video;
