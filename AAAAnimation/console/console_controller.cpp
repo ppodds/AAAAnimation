@@ -18,6 +18,14 @@ void ConsoleController::top()
 	std::cout << "\x1B[H";
 }
 
+void ConsoleController::set_console_mode()
+{
+	DWORD mode = 0;
+	GetConsoleMode(stdout_handle, &mode);
+	mode = mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+	SetConsoleMode(stdout_handle, mode);
+}
+
 // set console font size, weight and family
 void ConsoleController::set_console_font()
 {
