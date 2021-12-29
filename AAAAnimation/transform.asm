@@ -10,6 +10,10 @@ transform PROTO
 transform PROC
     push rbp
     mov rbp, rsp
+    push rbx
+    push rsi
+    push rdi
+    push r10
     mov rsi, rcx
     mov rdi, rdx
     mov rcx, r9
@@ -80,6 +84,10 @@ transform PROC
         pop rcx
     dec rcx ; loop can only do small jump
     jne L1 ; we need to use this replace loop 
+    pop r10
+    pop rdi
+    pop rsi
+    pop rbx
     leave
     ret
 transform ENDP
