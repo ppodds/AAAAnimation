@@ -9,6 +9,10 @@ AsciiPlayerThread::AsciiPlayerThread()
 {
 }
 
+AsciiPlayerThread::~AsciiPlayerThread()
+{
+}
+
 AsciiPlayerThread::AsciiPlayerThread(std::string file_path)
 {
 	this->file_path = file_path;
@@ -21,6 +25,7 @@ void AsciiPlayerThread::run()
 	setbuf(stdout, buf);
 	VideoDecoder video_decoder = VideoDecoder(file_path);
 	ConsoleController console_controller;
+	console_controller.set_console_mode();
 	console_controller.set_console_font();
 	console_controller.set_console_screen_buffer(video_decoder.get_video_width(), video_decoder.get_video_height());
 	AVFrame* frame = video_decoder.next_frame();
