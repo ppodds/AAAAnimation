@@ -41,13 +41,11 @@ void AsciiPlayerThread::run()
 			transform(frame->data[0], arr, width, height, frame->linesize[0]);
 			// check time again
 			// if this frame is too late, play it now
-			if (position >= play_time)
-				std::cout << arr;
-			else {
+			qint64 t = position;
+			if (play_time - 200 > t) // 200ms offset to avoid drop too many frames
 				// wait until the proper time and play this frame
-				QThread::currentThread()->wait(play_time - position);
-				std::cout << arr;
-			}
+				msleep(play_time - t);
+			std::cout << arr;
 			console_controller.top();
 		}
 		frame = video_decoder.next_frame();
