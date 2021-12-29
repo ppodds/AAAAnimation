@@ -10,6 +10,7 @@ class VideoDecoder
 {
 public:
 	VideoDecoder(std::string video_path);
+	~VideoDecoder();
 	AVFrame* next_frame();
 	int get_video_width();
 	int get_video_height();

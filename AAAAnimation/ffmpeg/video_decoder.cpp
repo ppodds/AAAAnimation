@@ -21,6 +21,13 @@ VideoDecoder::VideoDecoder(std::string video_path) {
 	current_frame = nullptr;
 }
 
+VideoDecoder::~VideoDecoder()
+{
+	avformat_close_input(&format_context);
+	av_packet_free(&temp_packet);
+	av_frame_free(&current_frame);
+}
+
 AVFrame* VideoDecoder::next_frame() {
 	if (temp_packet == nullptr)
 	{

@@ -9,10 +9,6 @@ AsciiPlayerThread::AsciiPlayerThread()
 {
 }
 
-AsciiPlayerThread::~AsciiPlayerThread()
-{
-}
-
 AsciiPlayerThread::AsciiPlayerThread(std::string file_path)
 {
 	this->file_path = file_path;

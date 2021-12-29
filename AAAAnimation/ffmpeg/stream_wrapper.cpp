@@ -4,6 +4,10 @@
 StreamWrapper::StreamWrapper() {
 
 }
+StreamWrapper::~StreamWrapper()
+{
+	avcodec_free_context(&codec_context);
+}
 StreamWrapper::StreamWrapper(AVStream* stream, AVCodecParameters* codec_par) {
 	this->stream = stream;
 	this->codec_par = codec_par;

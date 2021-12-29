@@ -7,6 +7,7 @@ class StreamWrapper
 {
 public:
 	StreamWrapper();
+	~StreamWrapper();
 	StreamWrapper(AVStream* stream, AVCodecParameters* codec_par);
 	void load_codec_context();
 	AVCodecContext* get_codec_context();

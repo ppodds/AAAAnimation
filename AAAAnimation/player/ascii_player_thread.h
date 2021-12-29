@@ -6,7 +6,6 @@ class AsciiPlayerThread : public QThread
     Q_OBJECT
 public:
     AsciiPlayerThread();
-    ~AsciiPlayerThread();
     AsciiPlayerThread(std::string file_path);
     void run();
 public slots:
