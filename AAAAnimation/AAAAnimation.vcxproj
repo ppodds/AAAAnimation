@@ -121,7 +121,6 @@
     <ClInclude Include="console\console_controller.h" />
     <ClInclude Include="ffmpeg\stream_wrapper.h" />
     <ClInclude Include="ffmpeg\video_decoder.h" />
-    <ClInclude Include="main.h" />
     <QtMoc Include="player\ascii_player_thread.h" />
     <ClInclude Include="transform.h" />
   </ItemGroup>

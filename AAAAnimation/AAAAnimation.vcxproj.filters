@@ -51,9 +51,6 @@
     <ClInclude Include="ffmpeg\video_decoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="console\console_controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>

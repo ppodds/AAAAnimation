@@ -1,5 +1,4 @@
 #include <QtWidgets/QApplication>
-#include "main.h"
 #include "player/ascii_player_thread.h"
 #include <QVideoWidget>
 #include <iostream>
