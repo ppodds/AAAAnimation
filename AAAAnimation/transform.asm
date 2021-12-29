@@ -18,26 +18,26 @@ transform PROC
         mov rcx, r8
         L2:
             mov bl, [rsi]
-            cmp bl, 56
+            cmp bl, 47
             jb L4
-            cmp bl, 76
+            cmp bl, 70
             jb L5
-            cmp bl, 96
+            cmp bl, 93
             jb L6
             cmp bl, 116
             jb L7
-            cmp bl, 136
+            cmp bl, 139
             jb L8
-            cmp bl, 156
+            cmp bl, 162
             jb L9
-            cmp bl, 176
+            cmp bl, 185
             jb L10
-            cmp bl, 196
+            cmp bl, 208
             jb L11
-            cmp bl, 216
+            cmp bl, 231
             jb L12
             cmp bl, 255
-            jb L13
+            jbe L13
             L4:
                 mov BYTE PTR [rdi], ' '
                 jmp L14
