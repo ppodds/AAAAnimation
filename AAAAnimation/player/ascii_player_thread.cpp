@@ -40,11 +40,8 @@ void AsciiPlayerThread::run()
 				arr = new unsigned char[(long long)height * (width + 1)]();
 			transform(frame->data[0], arr, width, height, frame->linesize[0]);
 			// check time again
-			// if this frame is too late, play it now
-			qint64 t = position;
-			if (play_time - 200 > t) // 200ms offset to avoid drop too many frames
-				// wait until the proper time and play this frame
-				msleep(play_time - t);
+			// wait until the proper time and play this frame
+			while (play_time - 150 > position); // 150ms offset to avoid drop too many frames
 			std::cout << arr;
 			console_controller.top();
 		}
