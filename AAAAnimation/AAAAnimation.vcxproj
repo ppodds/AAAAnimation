@@ -119,6 +119,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="utils.asm" />
     <MASM Include="transform.asm">
       <FileType>Document</FileType>
     </MASM>
@@ -128,6 +129,7 @@
     <ClInclude Include="ffmpeg\stream_wrapper.h" />
     <ClInclude Include="ffmpeg\video_decoder.h" />
     <QtMoc Include="player\ascii_player_thread.h" />
+    <ClInclude Include="utils.h" />
     <ClInclude Include="transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -3,6 +3,7 @@
 #include "../ffmpeg/video_decoder.h"
 #include "../console/console_controller.h"
 #include "../transform.h"
+#include "../utils.h"
 #include <QThread>
 
 AsciiPlayerThread::AsciiPlayerThread()
@@ -41,7 +42,7 @@ void AsciiPlayerThread::run()
 			transform(frame->data[0], arr, width, height, frame->linesize[0]);
 			// check time again
 			// wait until the proper time and play this frame
-			while (play_time - 150 > position); // 150ms offset to avoid drop too many frames
+			wait_until_smaller(play_time - 150, &position); // 150ms offset to avoid drop too many frames
 			std::cout << arr;
 			console_controller.top();
 		}

@@ -57,9 +57,15 @@
     <ClInclude Include="transform.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="transform.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="utils.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
