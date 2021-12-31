@@ -16,12 +16,12 @@ transform PROC
     push r10
     mov rsi, rcx
     mov rdi, rdx
-    mov rcx, r9; the count of the frame's height
+    mov rcx, r9 ; the count of the frame's height
     L1: 
         push rcx
-        mov rcx, r8; the count of the frame's width
+        mov rcx, r8 ; the count of the frame's width
         L2:
-            mov bl, [rsi]; classify the pixel's illumination, and assign a corresponded ASCII code
+            mov bl, [rsi] ; classify the pixel's illumination, and assign a corresponded ASCII code
             cmp bl, 47
             jb L4
             cmp bl, 70
@@ -76,13 +76,12 @@ transform PROC
                 inc rdi
                 inc rsi
             loop L2
-        mov BYTE PTR [rdi], 0Ah; let the ASCII frame new one line
+        mov BYTE PTR [rdi], 0Ah ; put the '\n' at the end of line
         inc rdi
         movsxd r10, SDWORD PTR [rbp+30h]
         sub r10,r8
-        add rsi, r10; add rsi the subtraction of the image raw data linesize and the frame width
-		    ; the image raw data contain some not required data between the frame width and
-		    ; linesize in every row
+        add rsi, r10 ; add rsi the subtraction of the image raw data linesize and the frame width
+		             ; ffmpeg align the memory , so the width of frame isn't equal to the width of memory
         pop rcx
     dec rcx ; loop can only do small jump
     jne L1 ; we need to use this replace loop 
