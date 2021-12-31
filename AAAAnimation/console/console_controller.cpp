@@ -33,7 +33,9 @@ void ConsoleController::set_console_font()
 	cfi.cbSize = sizeof(cfi);
 	GetCurrentConsoleFontEx(stdout_handle, FALSE, &cfi);
 	cfi.dwFontSize.Y = 1;
-	std::mbstowcs(cfi.FaceName, "Lucida Console", 32);
+	// replace Lucida Console with MS Gothic
+	// Lucida Console is not compatible with some device
+	std::mbstowcs(cfi.FaceName, "MS Gothic", 32);
 	// 700 is bold
 	cfi.FontWeight = 700;
 	SetCurrentConsoleFontEx(stdout_handle, FALSE, &cfi);
