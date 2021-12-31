@@ -52,19 +52,9 @@ void ConsoleController::set_console_screen_buffer(short width, short height)
 	csbi.srWindow.Top = 0;
 	csbi.dwMaximumWindowSize.X = width;
 	csbi.dwMaximumWindowSize.Y = height;
-	int c = SetConsoleScreenBufferInfoEx(stdout_handle, &csbi);
+	SetConsoleScreenBufferInfoEx(stdout_handle, &csbi);
 	COORD screen_buffer_size = { width, height };
-	int a = SetConsoleScreenBufferSize(stdout_handle, screen_buffer_size);
+	SetConsoleScreenBufferSize(stdout_handle, screen_buffer_size);
 	SMALL_RECT console_window = {0, 0, width-1, height-1};
-	int b = SetConsoleWindowInfo(stdout_handle, TRUE, &console_window);
-	auto e = GetLastError();
-	//ResizePseudoConsole()
-}
-
-void ConsoleController::set_window_buffer_size(short width, short height)
-{
-	/*WINDOW_BUFFER_SIZE_RECORD wbsr;
-	wbsr.dwSize.X = width;
-	wbsr.dwSize.Y = height;
-	SetWindowBuffer*/
+	SetConsoleWindowInfo(stdout_handle, TRUE, &console_window);
 }

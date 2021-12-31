@@ -10,7 +10,6 @@ public:
 	void set_console_mode();
 	void set_console_font();
 	void set_console_screen_buffer(short width, short height);
-	void set_window_buffer_size(short width, short height);
 private:
 	HANDLE stdout_handle;
 };
