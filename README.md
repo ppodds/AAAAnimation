@@ -1,5 +1,7 @@
 ﻿# AAAAnimation
 
+![](docs/project.png)
+
 ## About
 
 This is a term project of the Assembly Language and System Programming course in NCU. It decodes video with FFmpeg and plays ASCII animation with assembly. The graphic media player is implemented with Qt's QMediaPlayer and QVideoWidget.
