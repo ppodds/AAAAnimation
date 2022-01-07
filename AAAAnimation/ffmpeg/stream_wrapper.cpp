@@ -6,11 +6,13 @@ StreamWrapper::StreamWrapper() {
 }
 StreamWrapper::~StreamWrapper()
 {
+	// release memory
 	avcodec_free_context(&codec_context);
 }
 StreamWrapper::StreamWrapper(AVStream* stream, AVCodecParameters* codec_par) {
 	this->stream = stream;
 	this->codec_par = codec_par;
+	// get decoder from codec_id
 	codec = avcodec_find_decoder(codec_par->codec_id);
 	if (!codec)
 		throw std::exception("Unsupported video codec!");
